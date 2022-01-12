@@ -7,10 +7,7 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(array1, array2) {
-  if (!array1 || !array2) {
-    return "Pass two arrays as arguments";
-  }
-  if (array1.length !== array2.length) {
+  if (!array1 || !array2 || array1.length !== array2.length) {
     return false;
   }
   for (let i = 0; i < array1.length; i++) {

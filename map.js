@@ -18,5 +18,17 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-assertArraysEqual([1,2,3]);
-assertArraysEqual([1,2,3], [1,2, '3']);
+const map = (array, callback) => {
+  const results = [];
+  for (let item of array) {
+    results.push(callback(item));
+  }
+  return results;
+}
+
+const words = ["ground", "control", "to", "major", "tom"];
+const cats = ["Joey", "tom"];
+
+assertArraysEqual(map(words, word => word[0]),['g', 'c', 't', 'm', 't']);
+assertArraysEqual(map(words, word => word.toUpperCase()), ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]);
+assertArraysEqual(map(cats, cat => cat.replace('o', 0)), ["J0ey", "t0m"]);

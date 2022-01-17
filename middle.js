@@ -1,4 +1,7 @@
 const middle = function(array) {
+  if(!array || !Array.isArray(array)) {
+    return;
+  }
   let length = array.length;
   let midLength = Math.floor(length / 2);
   if (length < 3) {

@@ -35,3 +35,5 @@ assertEqual(findKey({
   beta: 2,
   gamma: 3
 }, x => x === 5), undefined);
+
+module.exports = findKey;

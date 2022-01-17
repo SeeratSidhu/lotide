@@ -32,3 +32,5 @@ const cats = ["Joey", "tom"];
 assertArraysEqual(map(words, word => word[0]),['g', 'c', 't', 'm', 't']);
 assertArraysEqual(map(words, word => word.toUpperCase()), ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]);
 assertArraysEqual(map(cats, cat => cat.replace('o', 0)), ["J0ey", "t0m"]);
+
+module.exports = map;
